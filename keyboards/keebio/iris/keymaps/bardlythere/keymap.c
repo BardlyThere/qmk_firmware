@@ -294,11 +294,11 @@ uint32_t layer_state_set_user(uint32_t state) {
           rgblight_mode(desired);
           break;
         case _NUM:
-          rgblight_mode_noeeprom(RGBLIGHT_MODE_SNAKE + 5);
+          rgblight_mode_noeeprom(RGBLIGHT_MODE_SNAKE + 2);
           rgblight_sethsv_noeeprom(HSV_ORANGE);
           break;
-        case _FUN: // Same as above but reverse direction, otherwise nightrider
-          rgblight_mode_noeeprom(RGBLIGHT_MODE_KNIGHT);
+        case _FUN:
+          rgblight_mode_noeeprom(RGB_MODE_XMAS);
           break;
         case _ADJUST:
           break;
