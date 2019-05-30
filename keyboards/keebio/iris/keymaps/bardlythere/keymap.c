@@ -298,7 +298,7 @@ uint32_t layer_state_set_user(uint32_t state) {
           rgblight_sethsv_noeeprom(HSV_ORANGE);
           break;
         case _FUN:
-          rgblight_mode_noeeprom(RGB_MODE_XMAS);
+          rgblight_mode_noeeprom(RGBLIGHT_MODE_CHRISTMAS);
           break;
         case _ADJUST:
           break;
