@@ -18,32 +18,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-#define PRODUCT         Dactyl Ergo(6x6)
+#include QMK_KEYBOARD_CONFIG_H
+
+/* USB Device descriptor parameter */
+#define VENDOR_ID       0xCB10
+#define PRODUCT_ID      0x1257
+#define DEVICE_VER      0x0100
+#define MANUFACTURER    Keebio
+#define PRODUCT         Quefrency
+#define DESCRIPTION     Split 60/65 percent staggered keyboard
 
 /* key matrix size */
 // Rows are doubled-up
-//#define MATRIX_ROWS 12
-//#define MATRIX_COLS 6
+#define MATRIX_ROWS 12
+#define MATRIX_COLS 8
 
 // wiring of each half
-/*#define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5 }
-#define MATRIX_ROW_PINS { F6, F7, B1, B3, B2, B6 }
-*/
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x3060
-#define DEVICE_VER      0x0001
-//#define MANUFACTURER    tshort
-// defined in subfolder
-#define DESCRIPTION     A split keyboard
-
-/* mouse config */
-#define MOUSEKEY_INTERVAL       20
-#define MOUSEKEY_DELAY          0
-#define MOUSEKEY_TIME_TO_MAX    60
-#define MOUSEKEY_MAX_SPEED      7
-#define MOUSEKEY_WHEEL_DELAY 0
+#define MATRIX_ROW_PINS { F4, D4, D7, E6, B4, C6 }
+#define MATRIX_COL_PINS { F5, F6, F7, B1, B3, B2, B6, B5 }
+#define MATRIX_ROW_PINS_RIGHT { F4, D4, D7, E6, B4, B5 }
+#define MATRIX_COL_PINS_RIGHT { F5, F6, F7, B1, B3, B2, B6, C6 }
+#define SPLIT_HAND_PIN D2
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCING_DELAY 5
@@ -56,28 +51,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
-/* Enables This makes it easier for fast typists to use dual-function keys */
-#define PERMISSIVE_HOLD
-
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
+#define RGBLIGHT_ANIMATIONS
+#define RGBLED_NUM 16    // Number of LEDs
 
-#define RGBLED_NUM 12    // Number of LEDs
-
-/*
- * Feature disable options
- *  These options are also useful to firmware size reduction.
- */
-
-/* disable debug print */
-// #define NO_DEBUG
-
-/* disable print */
-// #define NO_PRINT
-
-/* disable action features */
-//#define NO_ACTION_LAYER
-//#define NO_ACTION_TAPPING
-//#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION
+#define FORCE_NKRO
