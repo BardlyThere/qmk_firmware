@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //└────────┴────────┴────────┴────────┼────────┴────────┐       ┌────────┼────────┴────────┴────────┴────────┴────────┘
                                        KC_LCBR, KC_RBRC,           KC_8,   KC_6,
 //Thumb Clusters             ┌────────┼────────┼────────┤       ├────────┼────────┼────────┐
-                              KC_AT, KC_ENT,  KC_HOME,           KC_END,  KC_SPC,  KC_AT
+                              KC_AT,   KC_ENT,  KC_HOME,          KC_END,  KC_SPC,  KC_AT
 //                           └────────┴────────┴────────┘       └────────┴────────┴────────┘
 ),
 
